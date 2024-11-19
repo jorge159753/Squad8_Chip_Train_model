@@ -50,8 +50,8 @@ def excluir_modelo_antigo(output_dir):
 
 def treinar_modelo(data_yaml, output_dir, epochs=10, batch_size=16, img_size=640):
     
-    # Inicializar o modelo YOLOv8n pré-treinado
-    model = YOLO("best01.pt")  # YOLOv8n é o modelo nano (mais leve)
+    # Inicializar o modelo best pré-treinado
+    model = YOLO("best01.pt")
     
     # Excluir modelo anterior, se existir
     excluir_modelo_antigo(output_dir)
@@ -76,7 +76,7 @@ def treinar_modelo(data_yaml, output_dir, epochs=10, batch_size=16, img_size=640
 images_Train = os.path.join(VOLUME_FRAME_PATH)
 val_Train = os.path.join(VOLUME_FRAME_TREINAMENTO)
 dataset_dir = os.path.join("dataset") 
-output_dir = os.path.join("volumeYOLO")  #Dirotótio de saida dos dados
+output_dir = os.path.join("volumeYOLO")  #Dirotório de saida dos dados
 
 # Execução
 if __name__ == "__main__":
