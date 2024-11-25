@@ -1,0 +1,17 @@
+path: C:\Users\jsgoi\OneDrive\Desktop\Squad8_Chip_Train_model\data  # Caminho para a pasta principal do dataset
+
+train:  # Caminho para as imagens de treino e anotações de treino
+
+  images: C:\Users\jsgoi\OneDrive\Desktop\Squad8_Chip_Train_model\data\images\train  # Imagens de treino
+
+  labels: C:\Users\jsgoi\OneDrive\Desktop\Squad8_Chip_Train_model\data\labels\train  # Anotações de treino
+
+val:  # Caminho para as imagens de validação e anotações de validação
+
+  images: C:\Users\jsgoi\OneDrive\Desktop\Squad8_Chip_Train_model\data\images\val  # Imagens de validação
+
+  labels: C:\Users\jsgoi\OneDrive\Desktop\Squad8_Chip_Train_model\data\labels\val  # Anotações de validação
+
+nc: 2  # Número de classes (modifique conforme necessário)
+
+names: ['acidente', 'car']  # Nomes das classes (modifique conforme necessário)
