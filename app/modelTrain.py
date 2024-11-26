@@ -3,8 +3,8 @@ import shutil
 from ultralytics import YOLO
 
 # Diretório onde os modelos serão armazenados
-BASE_PATH = os.getcwd()  #Usa o diretório atual como base
-VOLUME_YOLO = os.path.join(BASE_PATH, 'volumeYolo')  # Diretório para armazenar os modelos
+BASE_PATH = os.path.join('Squad8_Chip_Train_model/app')
+VOLUME_YOLO = os.path.join(BASE_PATH, 'volumeYolo')
 
 # Certifica-se de que o diretório VOLUME_YOLO existe
 if not os.path.exists(VOLUME_YOLO):
@@ -98,7 +98,7 @@ def treinar_modelo(dataset_yaml, epochs=5, batch_size=8, img_size=416, workers=1
     # Limpar o diretório e manter apenas o arquivo 'best.pt'
     limpar_diretorio(os.path.join(VOLUME_YOLO, "modelo_treinado"))
 
-    print("Treinamento concluído. Apenas o modelo 'best.pt' foi mantido.")
+    print("Treinamento concluído.")
 
 
 import os
@@ -108,7 +108,7 @@ def main():
     dataset_yaml = "dataset.yaml"
     
     # Caminho do modelo externo pré-treinado (modelo vindo de fora)
-    pretrained_model_path = "best01.pt"  # Exemplo de caminho
+    pretrained_model_path = ""  # Exemplo de caminho
     
     # Verificação se o modelo pré-treinado existe
     if not os.path.exists(pretrained_model_path):
